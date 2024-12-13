@@ -10,10 +10,13 @@
 
     *{
       font-size: 30px;
-      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-family: sans-serif, "Helvetica Neue", Helvetica, sans-serif;
     }
 
     .container{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -21,25 +24,48 @@
         text-align: center;
       }
 
+      .box {
+            width: 600px; /* Lățimea boxului */
+            height: 600px; /* Înălțimea maximă a boxului */
+            overflow-y: auto; /* Scroll doar pe verticală */
+            border: 2px solid #333; /* O margine vizibilă */
+            border-radius: 10px; /* Colțuri rotunjite */
+            padding: 10px; /* Spațiu interior */
+            background-color: #fff; /* Fundal alb */
+        } 
+        ul {
+            list-style-type: none; /* Eliminăm punctele de listă */
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background-color: #d1e7dd;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
 
     
   </style>
 </head>
 
 <body>
+  <!-- <center><input></input></center> -->
   <div class="container">
-    <div id="round-numbers"></div>
-    <button id="btn_rock">rock</button>
-    <button id="btn_paper">paper</button>
-    <button id="btn_scissors" type="button">scissors</button>
+        <div class="stuff">
+              <div id="round-numbers"></div>
+              <button id="btn_rock">rock</button>
+              <button id="btn_paper">paper</button>
+              <button id="btn_scissors" type="button">scissors</button>
 
-    <div id="scor-om-id"></div>
-    <div id="scor-pc-id"></div>
-    <p>logs:</p>
-    <ul>
-      
-
-    </ul>
+              <div id="scor-om-id"></div>
+              <div id="scor-pc-id"></div>
+        </div>
+        
+        <div class="box">
+          <p>logs:</p>
+          <ul></ul>
+        </div>
   </div>
   <script src="script_two.js" defer></script>
 </body>
