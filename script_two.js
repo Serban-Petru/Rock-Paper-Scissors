@@ -126,7 +126,7 @@ scor_pc_id.appendChild(scor_pc_afisare);
     async function start() {
         //input_rutine();
         while(1){
-            let runde =prompt("How many rounds would you like to play?");
+            let runde = 5;
             for (let i = 1; i <= runde; i++) {
 
                 let human_selection = await asteaptaApasareaButonului();
